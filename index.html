@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+  <div class="top-cont">
+    <!--<div class="top-text">
+      <span>ROCK</span><br/>
+      <span>PAPER</span><br/>
+      <span>SCISSORS</span>
+    </div>--><!--Used an image instead of text-->
+    <img src="images/logo.svg" alt="logo" class="logo">
+
+    <div class="score-cont">
+      <span id="score-text">SCORE</span>
+      <span id="score">0</span>
+    </div>
+  </div>
+
+  <!--Contains the selections-->
+  <div class="body-cont-1">
+    <img src="images/bg-triangle.svg" alt="triangle-pic">
+    <div class="choose paper paper-position" onclick="setChoice(this)" id="paper">
+      <img src="images/icon-paper.svg" alt="paper-pic" class="pics">
+    </div>
+    <div class="choose scissors scissors-position" onclick="setChoice(this)" id="scissors">
+      <img src="images/icon-scissors.svg" alt="scissors-pic" class="pics">
+    </div>
+    <div class="choose rock rock-position" onclick="setChoice(this)" id="rock">
+      <img src="images/icon-rock.svg" alt="rock-pics" class="pics">
+    </div>
+  </div>
+
+  <!--Contains what shows after the player makes a selection-->
+  <div class="body-cont-2">
+    <div class="player-cont">
+      <p>YOU PICKED</p>
+      <div class="choose-2 player border">
+        <div class="halo-cont-1">
+          <div class="halo-1"></div>
+          <div class="halo-2"></div>
+          <div class="halo-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results">
+      <p class="result"></p>
+      <button class="play-again" onclick="reset()">PLAY AGAIN</button>
+    </div>
+
+    <div class="house-cont">
+      <p>THE HOUSE PICKED</p>
+      <div class="choose-2 house border" id="small-circle">
+        <div class="halo-cont-2">
+          <div class="halo-1"></div>
+          <div class="halo-2"></div>
+          <div class="halo-3"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rules" onclick="showRules()">RULES</div>
+  <div class="rules-main-cont">
+    <div class="rules-cont">
+      <div class="rules-top">
+        <span class="rules-span">RULES</span>
+        <img src="images/icon-close.svg" alt="cancel button" class="rules-cancel" onclick="hideRules()">
+      </div>
+      <img src="images/image-rules.svg" alt="rules picture" class="rules-image">
+      <img src="images/icon-close.svg" alt="cancel button" class="rules-cancel" id="rules-cancels" onclick="hideRules()">
+    </div>
+  </div>
+</body>
+</html>

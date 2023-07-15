@@ -28,21 +28,26 @@
   margin: 0;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 body {
   background-image: radial-gradient(circle, hsl(214deg, 47%, 23%), hsl(237deg, 49%, 15%));
   font-family: barlow-regular, sans-serif;
-  user-select: none;
 }
 
 .top-cont {
-  margin: 2em auto 0 auto;
+  margin: 0.5em auto 0 auto;
   height: 6rem;
   width: 90%;
   border: 2px solid hsl(217deg, 16%, 45%);
   border-radius: 0.9375rem;
   display: flex;
   justify-content: space-between;
-  padding: 1em;
+  align-items: center;
+  padding: 0.4em;
 }
 
 .top-text {
@@ -167,6 +172,11 @@ the background property as I did */
   position: relative;
 }
 
+@media screen and (max-width: 500px) {
+  .body-cont-2 {
+    padding: 3rem 0 !important;
+  }
+}
 .body-cont-2 {
   width: fit-content;
   height: fit-content;
@@ -184,6 +194,11 @@ the background property as I did */
   transform: translate(-50%, -50%);
 }
 
+@media screen and (max-width: 500px) {
+  .player-cont {
+    margin-right: 0rem !important;
+  }
+}
 .player-cont {
   display: flex;
   flex-direction: column-reverse;
@@ -384,8 +399,10 @@ the background property as I did */
 
 @media screen and (min-width: 510px) {
   .top-cont {
+    margin: 2em auto 0 auto;
     max-width: 37.5rem;
     height: 8.125rem;
+    padding: 1em;
   }
   .logo,
 .score-cont {
